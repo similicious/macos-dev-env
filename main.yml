@@ -1,0 +1,14 @@
+---
+- name: Configure host.
+  hosts: all
+
+  vars_files:
+    - config.yml
+
+  tasks:
+    - import_tasks: tasks/macos-defaults.yml
+      tags: ['defaults']
+
+  roles:
+    - role: elliotweiser.osx-command-line-tools
+    - role: geerlingguy.mac.homebrew

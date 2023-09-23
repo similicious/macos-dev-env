@@ -1,0 +1,8 @@
+- name: Set boolean valued key for application domain
+  community.general.osx_defaults:
+    domain: "{{ item.domain }}"
+    key:  "{{ item.key }}"
+    type: "{{ item.type }}"
+    value: "{{ item.value }}"
+    state: present
+  with_items: "{{ macos_defaults }}"
