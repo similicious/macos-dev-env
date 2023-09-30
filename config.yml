@@ -13,6 +13,7 @@ homebrew_installed_packages:
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - homebrew/cask-fonts
 
 homebrew_cask_apps:
   - google-chrome
@@ -24,12 +25,13 @@ homebrew_cask_apps:
   - iterm2
   - shottr
   - adobe-acrobat-reader
+  - font-fira-code-nerd-font
+  - linearmouse
 
 # taken from https://github.com/geerlingguy/dotfiles/blob/master/.osx
 macos_defaults:
-
   # Keyboard / Mouse
-  
+
   # Disable natural scrolling
   - domain: NSGlobalDomain
     key: com.apple.swipescrolldirection
@@ -46,7 +48,7 @@ macos_defaults:
     value: 25
 
   # Finder
-  
+
   # New windows open home folder
   - domain: com.apple.finder
     key: NewWindowTarget
@@ -62,7 +64,7 @@ macos_defaults:
     key: AppleShowAllExtensions
     type: bool
     value: true
-  # Disable the warning when changing a file extension 
+  # Disable the warning when changing a file extension
   - domain: com.apple.finder
     key: FXEnableExtensionChangeWarning
     type: bool
@@ -72,4 +74,3 @@ macos_defaults:
     key: DSDontWriteNetworkStores
     type: bool
     value: true
-    
